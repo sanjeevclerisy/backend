@@ -1,15 +1,15 @@
-##Demo Application
+Demo Application
 ================
 
 This is a demo application created as the backend API that includes CRUD operations.
 
-##Requirements
+Requirements
 ------------
   * Symfony 3.4;
   * PHP 5.5.9 or higher;
   * PDO-PGSQL extension enabled;
     
-##Installation
+Installation
 ------------  
 	1. Create project using composer
 		```bash
@@ -24,7 +24,7 @@ This is a demo application created as the backend API that includes CRUD operati
 		$ php bin/console doctrine:schema:update --force
 		```
 		
-##Usage
+Usage
 -----
 
 Run app on localhost or ip by using following commands:-
