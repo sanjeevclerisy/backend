@@ -5,6 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Mapping\ClassMetadata;
 use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * users
  *
@@ -51,18 +52,6 @@ class Users
      */
     private $mobile;
 
-    public static function loadValidatorMetadata(ClassMetadata $metadata)
-    {
-        $metadata->addPropertyConstraint('firstname', new Assert\NotBlank());
-        $metadata->addPropertyConstraint('lastname', new Assert\NotBlank());
-        // $metadata->addConstraint(new UniqueEntity(array(
-        //     'fields'  => 'email'
-        // )));
-        $metadata->addPropertyConstraint('email', new Assert\NotBlank(),new Assert\Email(array(
-            'message' => 'The {{ value }} is not a valid email.')));
-        $metadata->addPropertyConstraint('mobile', new Assert\NotBlank());
-        // $metadata->addPropertyConstraint('email', new Assert\Email());
-    }
     /**
      * Get id
      *
