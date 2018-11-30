@@ -9,7 +9,7 @@ class Userservice
     private $entityManager;
     public function __construct(EntityManagerInterface $em) 
     {
-      $this->entityManager = $em;
+		$this->entityManager = $em;
     }
 
     /*
@@ -26,7 +26,7 @@ class Userservice
      */
     public function addUser($userInfo)
     {
-   	    $this->entityManager->persist($userInfo);
+		$this->entityManager->persist($userInfo);
         $this->entityManager->flush();
         return true; 
     }
